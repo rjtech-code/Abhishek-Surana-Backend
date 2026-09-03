@@ -104,10 +104,12 @@ export const createInitiativeSchema = z.object({
       .default(0),
 
     published: z
-      .boolean()
+      .preprocess((val) => {
+        if (typeof val === "string") return val === "true";
+        return val;
+      }, z.boolean())
       .optional()
       .default(false),
-
     seo: z
       .object({
         metaTitle: z.string().optional(),
