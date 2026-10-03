@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Generated output and test coverage
+dist/
+coverage/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
